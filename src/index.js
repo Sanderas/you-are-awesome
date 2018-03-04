@@ -19,16 +19,13 @@ const createProtoMagicObject = () => {
     return f;
 };
 var sum1 = 0;
+Function.prototype.toString=function() {return sum1;}
 const incrementor = () => {
     sum1 += 1;
-
     function add() {
         sum1 += 1;
-        if (sum1 == 3 || sum1 == 8 || sum1 == 10 || sum1 == 15)
-            return sum1;
         return add;
     }
-
     return add;
 };
 var sum = 0;
